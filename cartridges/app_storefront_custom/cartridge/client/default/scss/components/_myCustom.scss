@@ -1,0 +1,11 @@
+body{
+    height:100vh; 
+    margin:0;
+    display:flex; 
+    flex-direction:column;
+    background-color:red;
+}
+
+#maincontent {
+    min-height: calc(100vh - 380px);
+}

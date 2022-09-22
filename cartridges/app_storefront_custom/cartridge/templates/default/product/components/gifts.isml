@@ -1,0 +1,11 @@
+<label for="gift">Gift</label>
+<select class="gift-select custom-select form-control" id="gift">
+    <option value="">
+        Select Gift
+    </option>
+    <isloop items="${gifts}" var="gift">
+        <option value="${gift.uuid}">
+            ${gift.name}
+        </option>
+    </isloop>
+</select>

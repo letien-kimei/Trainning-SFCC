@@ -4,7 +4,7 @@
         Select Gift
     </option>
     <isloop items="${gifts}" var="gift">
-        <option value="${gift.uuid}">
+        <option value="${gift.giftId}">
             ${gift.name}
         </option>
     </isloop>

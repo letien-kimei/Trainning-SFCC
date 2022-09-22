@@ -35,8 +35,8 @@ var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
 server.get('Show', cache.applyPromotionSensitiveCache, consentTracking.consent, function (req, res, next) {
 
     var GiftModel = require('*/cartridge/models/gift');
-    //var gifts = GiftModel.get();
-    var giftTest = GiftModel.getFirst('gift', '4536564635356');
+    var gifts = GiftModel.get();
+    //var giftTest = GiftModel.getFirst('gift', '4536564635356');
     
     var productHelper = require('*/cartridge/scripts/helpers/productHelpers');
     var showProductPageHelperResult = productHelper.showProductPage(req.querystring, req.pageMetaData);

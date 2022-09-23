@@ -352,16 +352,4 @@ server.get('ShowBonusProducts', function (req, res, next) {
     next();
 });
 
-server.get('Testt', function (req, res, next) {
-    var GiftModel = require('*/cartridge/models/gift');
-
-    var gifts = GiftModel.get();
-
-    res.json({
-        gifts: gifts
-    });
-
-    next();
-});
-
 module.exports = server.exports();

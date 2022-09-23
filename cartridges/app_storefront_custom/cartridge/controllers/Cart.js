@@ -204,6 +204,7 @@ server.get(
         res.setViewData({ reportingURLs: reportingURLs });
 
         var basketModel = new CartModel(currentBasket);
+        
         res.render('cart/cart', basketModel);
         next();
     }

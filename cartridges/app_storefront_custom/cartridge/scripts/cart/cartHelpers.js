@@ -165,11 +165,18 @@ function addLineItem(
     optionModel,
     defaultShipment
 ) {
+
     var productLineItem = currentBasket.createProductLineItem(
         product,
         optionModel,
         defaultShipment
     );
+
+    var testLineItem = {
+        product: product,
+        optionModel: optionModel,
+        defaultShipment: defaultShipment
+    };
 
     if (product.bundle && childProducts.length) {
         updateBundleProducts(productLineItem, childProducts);
@@ -389,6 +396,7 @@ function addProductToCart(currentBasket, productId, quantity, childProducts, opt
                 : Resource.msg('error.alert.selected.quantity.cannot.be.added', 'product', null);
         }
     } else {
+        var test_product = product;
         var productLineItem;
         productLineItem = addLineItem(
             currentBasket,
@@ -401,6 +409,17 @@ function addProductToCart(currentBasket, productId, quantity, childProducts, opt
 
         result.uuid = productLineItem.UUID;
     }
+
+    var testt = {
+        currentBasket: currentBasket,
+        product: product,
+        quantity: quantity,
+        childProducts: childProducts,
+        optionModel: optionModel,
+        defaultShipment: defaultShipment
+    };
+
+    var ggg = testt;
 
     return result;
 }

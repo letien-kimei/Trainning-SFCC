@@ -176,6 +176,8 @@ server.get(
     consentTracking.consent,
     csrfProtection.generateToken,
     function (req, res, next) {
+        
+        
         var BasketMgr = require('dw/order/BasketMgr');
         var Transaction = require('dw/system/Transaction');
         var CartModel = require('*/cartridge/models/cart');

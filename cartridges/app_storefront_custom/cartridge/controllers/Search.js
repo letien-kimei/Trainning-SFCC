@@ -145,7 +145,6 @@ server.get('ShowAjax', cache.applyShortPromotionSensitiveCache, consentTracking.
  */
 server.get('Show', cache.applyShortPromotionSensitiveCache, consentTracking.consent, function (req, res, next) {
     var searchHelper = require('*/cartridge/scripts/helpers/searchHelpers');
-
     if (req.querystring.cgid) {
         var pageLookupResult = searchHelper.getPageDesignerCategoryPage(req.querystring.cgid);
 

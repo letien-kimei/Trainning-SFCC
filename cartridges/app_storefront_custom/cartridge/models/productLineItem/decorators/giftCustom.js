@@ -1,11 +1,8 @@
 'use strict';
 
-module.exports = function (object, lineItem) {
+module.exports = function (object, gift) {
     Object.defineProperty(object, 'gift_custom', {
         enumerable: true,
-        value: {
-            id: "gift_id",
-            text: 'ok gift'
-        }
+        value: gift
     });
 };

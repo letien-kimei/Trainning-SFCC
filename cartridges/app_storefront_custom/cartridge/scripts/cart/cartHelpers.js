@@ -183,6 +183,12 @@ function addLineItem(
     }
 
     productLineItem.setQuantityValue(quantity);
+    // productLineItem.gift = {
+    //     id: "gift id",
+    //     text: 'gift text'
+    // };
+
+    var ffff = productLineItem;
 
     return productLineItem;
 }
@@ -339,6 +345,7 @@ function checkBundledProductCanBeAdded(childProducts, productLineItems, quantity
  *  @return {Object} returns an error object
  */
 function addProductToCart(currentBasket, productId, quantity, childProducts, options, giftId) {
+
     var availableToSell;
     var defaultShipment = currentBasket.defaultShipment;
     var perpetual;

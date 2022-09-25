@@ -16,6 +16,9 @@
     <div class="menu-group" role="navigation">
         <ul class="nav navbar-nav" role="menu">
             <isif condition="${pdict.categories}">
+                <li class="nav-item " role="presentation">
+                    <a href="${URLUtils.url('Home-Show')}" class="nav-link" role="link" tabindex="0">Home</a>
+                </li>
                 <isloop items="${pdict.categories}" var="category">
                     <isif condition="${category.subCategories}">
                         <li class="nav-item dropdown" role="presentation">

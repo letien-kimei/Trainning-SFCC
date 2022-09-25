@@ -53,6 +53,8 @@ function isLocaleValid(currentLocale) {
 function Locale(currentLocale, allowedLocales, siteId) {
     var currentCountry = !isLocaleValid(currentLocale) ? countries[0]
         : countries.filter(function (country) {
+            var checkcurrentLocale =currentLocale;
+            var checkcountry = country;
             return country.id === currentLocale.ID;
         })[0];
 
